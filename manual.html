@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizard Network & PC Troubleshooting</title>
-<meta name="description" content="User Guide for Wizard of the Scrying Tower. Learn what each diagnostic spell does, including system monitoring, network tools, file utilities, and advanced troubleshooting features.">
-<meta name="keywords" content="wizard scryer manual, wizard scryer user guide, diagnostic spells, system tools, network troubleshooting, file utilities, pc diagnostics">
-<meta name="author" content="Ben Fletcher">
 
-<meta property="og:title" content="Wizard Scryer — User Guide">
-<meta property="og:description" content="Explore every diagnostic spell in Wizard of the Scrying Tower, from system monitoring to network and file tools.">
-<meta property="og:url" content="https://wizardscryer.com/manual.html">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://wizardscryer.com/Master%20logo.png">
+    <meta name="description" content="User Guide for Wizard of the Scrying Tower. Learn what each diagnostic spell does, including system monitoring, network tools, file utilities, and advanced troubleshooting features.">
+    <meta name="keywords" content="wizard scryer manual, wizard scryer user guide, diagnostic spells, system tools, network troubleshooting, file utilities, pc diagnostics">
+    <meta name="author" content="Ben Fletcher">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Wizard Scryer User Guide",
-  "description": "Detailed explanations of every diagnostic spell in Wizard of the Scrying Tower.",
-  "url": "https://wizardscryer.com/manual.html",
-  "author": {
-    "@type": "Person",
-    "name": "Ben Fletcher"
-  }
-}
-</script>
+    <meta property="og:title" content="Wizard Scryer — User Guide">
+    <meta property="og:description" content="Explore every diagnostic spell in Wizard of the Scrying Tower, from system monitoring to network and file tools.">
+    <meta property="og:url" content="https://wizardscryer.com/manual.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://wizardscryer.com/Master%20logo.png">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Wizard Scryer User Guide",
+      "description": "Detailed explanations of every diagnostic spell in Wizard of the Scrying Tower.",
+      "url": "https://wizardscryer.com/manual.html",
+      "author": {
+        "@type": "Person",
+        "name": "Ben Fletcher"
+      }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/BenF22122/wizardscryer.com/refs/heads/main/FAVicon.png">
@@ -146,132 +146,7 @@
             margin-bottom: 40px;
         }
 
-        /* Downloads Section */
-        .download-section {
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--gold);
-        }
-
-        .tier-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        .spell-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.spell-card {
-    background: #0f1a2b;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #2a3b55;
-}
-
-.spell-card h4 {
-    margin-top: 0;
-    color: #7fc4ff;
-}
-.spell-card h4 {
-    margin-top: 0;
-    color: #d4af37; /* classic gold */
-}
-
-        
-
-        .card {
-            background-color: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 40px 30px;
-            width: 340px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Distinct styles for versions */
-        .apprentice {
-            border-top: 4px solid var(--magic-glow);
-        }
-        .apprentice:hover {
-            border-color: var(--magic-glow);
-            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.2);
-        }
-
-        .master {
-            border-top: 4px solid var(--gold);
-        }
-        .master:hover {
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
-        }
-
-        .card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .card .badge {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .apprentice .badge { background-color: rgba(79, 172, 254, 0.2); color: var(--magic-glow); }
-        .master .badge { background-color: rgba(243, 156, 18, 0.2); color: var(--gold); }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 30px;
-            flex-grow: 1;
-        }
-
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: bold;
-            text-align: center;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn-apprentice {
-            background: linear-gradient(135deg, var(--magic-blue), var(--magic-glow));
-            color: #fff;
-        }
-        .btn-apprentice:hover { background: #4facfe; color: #fff; }
-
-        .btn-master {
-            background: linear-gradient(135deg, #d35400, var(--gold));
-            color: #fff;
-        }
-        .btn-master:hover { background: #f1c40f; color: #fff; }
-
-        /* About & Help Container */
+        /* Info Container */
         .info-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -297,17 +172,122 @@
             color: var(--text-muted);
         }
 
-        /* FAQ/Help Accordion Style */
-        .faq-item {
-            margin-top: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 15px;
+        /* Spell Grid */
+        .spell-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .faq-item h4 {
+        /* Flip Card (front only) */
+        .flip-card {
+            background: #0f1a2b;
+            border-radius: 8px;
+            border: 1px solid #2a3b55;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .flip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            border-color: var(--magic-glow);
+        }
+
+        .flip-card h4 {
+            margin-top: 0;
+            color: #d4af37;
+            margin-bottom: 8px;
+        }
+
+        .flip-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Legacy spell-card (for ones not yet converted) */
+        .spell-card {
+            background: #0f1a2b;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #2a3b55;
+        }
+
+        .spell-card h4 {
+            margin-top: 0;
+            color: #d4af37;
+            margin-bottom: 8px;
+        }
+
+        .spell-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Modal System */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #131a26;
+            color: var(--text-light);
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(79, 172, 254, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-content h2 {
             color: var(--gold);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .modal-content h3 {
+            color: var(--magic-glow);
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .modal-content p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .modal-content pre {
+            background: #0f1a2b;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #2a3b55;
+            overflow-x: auto;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .close-modal {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: var(--magic-blue);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
         }
 
         /* Footer */
@@ -320,194 +300,363 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Responsive Layout */
+        /* Responsive */
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; }
             .hero h1 { font-size: 2.2rem; }
-            .tier-container { flex-direction: column; align-items: center; }
-            .card { width: 100%; max-width: 360px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-area">
-            <img src="https://raw.githubusercontent.com/BenF22122/WizardHelp/main/Master%20logo.png" alt="Wizard of the Scrying Tower Logo" class="logo-img">
-            <div class="logo-text">Wizard of the Scrying Tower</div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="https://wizardscryer.com">Home</a></li>
-                <li><a href="https://wizardscryer.com/#download">Download</a></li>
-                <li><a href="https://wizardscryer.com/about.html#about">About</a></li>
-                <li><a href="https://wizardscryer.com/FAQ.html#help">FAQ</a></li>
-                <li><a href="#User Guide">User Guide</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo-area">
+        <img src="https://raw.githubusercontent.com/BenF22122/WizardHelp/main/Master%20logo.png" alt="Wizard of the Scrying Tower Logo" class="logo-img">
+        <div class="logo-text">Wizard of the Scrying Tower</div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="https://wizardscryer.com">Home</a></li>
+            <li><a href="https://wizardscryer.com/#download">Download</a></li>
+            <li><a href="https://wizardscryer.com/about.html#about">About</a></li>
+            <li><a href="https://wizardscryer.com/FAQ.html#help">FAQ</a></li>
+            <li><a href="#User Guide">User Guide</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section class="hero">
-        <img src="https://raw.githubusercontent.com/BenF22122/WizardHelp/refs/heads/main/Master%20logo.png" alt="Wizard of the Scrying Tower Logo" class="hero-logo">
-        <h1>Cast Away Your <span>PC & Network Issues</span></h1>
-        <p>A powerful diagnostic engine wrapped in a magical interface. 
-           Scan your system and network with clarity and style.</p>
+<section class="hero">
+    <img src="https://raw.githubusercontent.com/BenF22122/WizardHelp/refs/heads/main/Master%20logo.png" alt="Wizard of the Scrying Tower Logo" class="hero-logo">
+    <h1>Cast Away Your <span>PC & Network Issues</span></h1>
+    <p>A powerful diagnostic engine wrapped in a magical interface. Scan your system and network with clarity and style.</p>
+</section>
+
+<div class="info-container">
+    <section class="info-section" id="about">
+        <h2>How to use Wizard of the Scrying Tower</h2>
+        <p>Wizard of the Scrying Tower is a free diagnostic tool that helps you identify and resolve issues with your PC and network.</p>
+        <p>After installation, run the application and choose the spell you want to cast. Each spell reveals useful information about your device or the network you’re connected to.</p>
     </section>
 
+    <section class="info-section" id="help">
+        <h2>Spellbook</h2>
+        <p class="section-intro">These are the spells the Wizard can cast.</p>
+        <p class="section-intro">Click <a href="https://raw.githubusercontent.com/BenF22122/WizardScryer.com/main/WizardPDF.pdf">here</a> to download a full user guide.</p>
 
-
-    <div class="info-container">
-        
-        <section class="info-section" id="about">
-            <h2>How to use Wizard of the Scrying Tower</h2>
-            <p>Wizard of the Scrying Tower is a free diagnostic tool that helps you identify and resolve issues with your PC and network.</p>
-            <p>After installation, run the application and choose the spell you want to cast. Each spell reveals useful information about your device or the network you’re connected to.</p>
-        </section>
-
-        <section class="info-section" id="help">
-            <h2>Spellbook</h2>
-            <p class="section-intro">These are the spells the Wizard can cast.</p>
-            <p class="section-intro">Click <a href="https://raw.githubusercontent.com/BenF22122/WizardScryer.com/main/WizardPDF.pdf
-">here</a> to download a full user guide.</p>
-        
-            <div class="spell-grid">
-        
-                <div class="spell-card">
-                    <h4>Admin Tools</h4>
-                    <p>Everyday checks and quick diagnostics. No deep‑level magic.</p>
-                </div>
-        
-                <div class="spell-card">
-                    <h4>System Monitor</h4>
-                    <p>Real‑time tracking of CPU, memory, disk and network activity.</p>
-                </div>
-        
-                <div class="spell-card">
-                    <h4>Scrolls</h4>
-                    <p>Create, edit and destroy encrypted files using WizLock.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Events</h4>
-                    <p>Search and or filter system events using simple search terms.</p>
-                </div>
-        
-                <div class="spell-card">
-                    <h4>Network</h4>
-                    <p>Ping, trace, scan ports and analyse network performance.</p>
-                </div>
-        
-                <div class="spell-card">
-                    <h4>Hardware</h4>
-                    <p>Check component health, drivers and hardware performance.</p>
-                </div>
-        
-                <div class="spell-card">
-                    <h4>Disk Scan</h4>
-                    <p>Find the largest files and analyse storage usage.</p>
-                </div>
-        
-                <div class="spell-card">
-                    <h4>LAN Scan</h4>
-                    <p>Discover all devices connected to the local network.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Wizard Error</h4>
-                    <p>Use this to see errors with the Wizard itself.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Program Spy</h4>
-                    <p>Monitor and analyze running programs and their activities such as CPU, RAM and uptime</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Updates</h4>
-                    <p>Check for and install the latest updates for Windows and installed applications.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Boot</h4>
-                    <p>Manage and analyze the system's boot process and startup applications.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Sound</h4>
-                    <p>Manage and analyze the system's audio settings and connected devices.</p>
-                </div>
-
-               <div class="spell-card">
-                    <h4>System</h4>
-                    <p>Discover local Windows activation status, hardware health, TPM settings and general system overview.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Benchmark</h4>
-                    <p>Measure and compare the performance of different hardware components.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Custom Spell</h4>
-                    <p>Create and manage custom spells for unique tasks.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Export</h4>
-                    <p>Export HTML reports about your local device ranging from battery information to full system reports.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Services</h4>
-                    <p>Manage and analyze the system's services.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>File Spy</h4>
-                    <p>See detailed information about a file.</p>
-                </div>
-
-                <div class="spell-card">
-                    <h4>Grimoire</h4>
-                    <p>A place to keep notes, ideas and thoughts..</p>
-                </div>
-        
+        <div class="spell-grid">
+            <!-- Admin Tools -->
+            <div class="flip-card" data-spell="admin-tools">
+                <h4>Admin Tools</h4>
+                <p>Everyday checks and quick diagnostics. No deep‑level magic.</p>
             </div>
-            <center> <br>
+
+            <!-- System Monitor -->
+            <div class="flip-card" data-spell="system-monitor">
+                <h4>System Monitor</h4>
+                <p>Real‑time tracking of CPU, memory, disk and network activity.</p>
+            </div>
+
+            <!-- Scroll Spells -->
+            <div class="flip-card" data-spell="scrolls">
+                <h4>Scroll Spells</h4>
+                <p>Create, edit and destroy encrypted files using WizLock.</p>
+            </div>
+
+            <!-- Events -->
+            <div class="flip-card" data-spell="events">
+                <h4>Events</h4>
+                <p>Search Windows events using plain english.</p>
+            </div>
+
+            <!-- Network -->
+            <div class="flip-card" data-spell="network">
+                <h4>Network</h4>
+                <p>Ping, trace, scan ports and analyse network performance.</p>
+            </div>
+
+            <!-- Hardware -->
+            <div class="flip-card" data-spell="hardware">
+                <h4>Hardware</h4>
+                <p>Check component health, drivers and hardware performance.</p>
+            </div>
+
+            <!-- Disk Scan -->
+            <div class="flip-card" data-spell="disk-scan">
+                <h4>Disk Scan</h4>
+                <p>Find the largest files and analyse storage usage.</p>
+            </div>
+
+            <!-- LAN Scan -->
+            <div class="flip-card" data-spell="lan-scan">
+                <h4>LAN Scan</h4>
+                <p>Discover all devices connected to the local network.</p>
+            </div>
+
+            <!-- Wizard Error -->
+            <div class="flip-card" data-spell="wizard-error">
+                <h4>Wizard Error</h4>
+                <p>Use this to see errors with the Wizard itself.</p>
+            </div>
+
+            <!-- Program Spy -->
+            <div class="flip-card" data-spell="program-spy">
+                <h4>Program Spy</h4>
+                <p>Monitor running programs and their CPU, RAM and uptime.</p>
+            </div>
+
+            <!-- Updates -->
+            <div class="flip-card" data-spell="updates">
+                <h4>Updates</h4>
+                <p>Check for and install the latest updates.</p>
+            </div>
+
+            <!-- Boot -->
+            <div class="flip-card" data-spell="boot">
+                <h4>Boot</h4>
+                <p>Analyse startup applications and boot performance.</p>
+            </div>
+
+            <!-- Sound -->
+            <div class="flip-card" data-spell="sound">
+                <h4>Sound</h4>
+                <p>Manage audio settings and connected devices.</p>
+            </div>
+
+            <!-- System -->
+            <div class="flip-card" data-spell="system">
+                <h4>System</h4>
+                <p>Activation status, TPM, hardware health and system overview.</p>
+            </div>
+
+            <!-- Benchmark -->
+            <div class="flip-card" data-spell="benchmark">
+                <h4>Benchmark</h4>
+                <p>Measure and compare hardware performance.</p>
+            </div>
+
+            <!-- Custom Spell -->
+            <div class="flip-card" data-spell="custom-spell">
+                <h4>Custom Spell</h4>
+                <p>Create and manage custom spells.</p>
+            </div>
+
+            <!-- Export -->
+            <div class="flip-card" data-spell="export">
+                <h4>Export</h4>
+                <p>Export HTML reports about your device.</p>
+            </div>
+
+            <!-- Services -->
+            <div class="flip-card" data-spell="services">
+                <h4>Services</h4>
+                <p>Manage and analyse system services.</p>
+            </div>
+
+            <!-- File Spy -->
+            <div class="flip-card" data-spell="file-spy">
+                <h4>File Spy</h4>
+                <p>See detailed information about a file.</p>
+            </div>
+
+            <!-- Grimoire -->
+            <div class="flip-card" data-spell="grimoire">
+                <h4>Grimoire</h4>
+                <p>A place to keep notes, ideas and thoughts.</p>
+            </div>
+        </div>
+
+        <center><br>
             <p class="section-intro">With updates and more spells on the way.</p>
-            </center>
-        </section>
-        
+        </center>
+    </section>
+</div>
 
-            
+<footer>
+    <p>&copy; 2026 Wizard of the Scrying Tower systems</p>
+</footer>
 
-        </section>
+<!-- Modal -->
+<div class="modal" id="spell-modal">
+    <div class="modal-content">
+        <h2 id="modal-title">Spell Name</h2>
+        <p id="modal-summary">Short summary.</p>
 
+        <h3>What it does</h3>
+        <p id="modal-details">Detailed description of what this spell does.</p>
+
+        <h3 id="modal-extra-heading" style="display:none;">Example Output</h3>
+        <pre id="modal-extra" style="display:none;"></pre>
+
+        <button class="close-modal">Close</button>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Wizard of the Scrying Tower systems </p>
-    </footer>
+</div>
 
 <script>
     // Seasonal logo swap
     const logoElements = document.querySelectorAll('.logo-img, .hero-logo');
     const month = new Date().getMonth(); // 0 = Jan, 9 = Oct, 11 = Dec
-
     let seasonalLogo = "https://raw.githubusercontent.com/BenF22122/WizardHelp/main/Master%20logo.png";
 
-    if (month === 9) { 
-        // October → Halloween
+    if (month === 9) {
         seasonalLogo = "https://raw.githubusercontent.com/BenF22122/WizardHelp/refs/heads/main/Halloween.png";
-    } 
-    else if (month === 11) { 
-        // December → Santa
+    } else if (month === 11) {
         seasonalLogo = "https://raw.githubusercontent.com/BenF22122/WizardHelp/refs/heads/main/Santa.png";
     }
 
     logoElements.forEach(img => img.src = seasonalLogo);
-</script>
 
+    // Spell data for modal
+    const spellData = {
+        "admin-tools": {
+            title: "Admin Tools",
+            summary: "Everyday checks and quick diagnostics. No deep‑level magic.",
+            details: "Provides a quick stop for day-to-day administration tasks such as basic system checks, quick access to common tools, and lightweight diagnostics."
+        },
+        "system-monitor": {
+            title: "System Monitor",
+            summary: "Real‑time tracking of CPU, memory, disk and network activity.",
+            details: "Includes per-core CPU load, memory paging, disk queue length, network throughput and process-level usage to help you see exactly what is slowing your system.",
+            extraHeading: "Example Output",
+            extra: "CPU: 18% (Core 1: 12%)\nRAM: 7.4 GB / 16 GB (46%)\nDisk: 3% active\nNetwork: 2.1 Mbps down / 0.4 Mbps up"
+        },
+        "scrolls": {
+            title: "Scroll Spells",
+            summary: "Create, edit and destroy encrypted files using WizLock.",
+            details: "Securely create, encrypt, view, and edit local files containing sensitive credentials, technician notes, or system logs using the WizLock subsystem."
+        },
+        "events": {
+            title: "Events",
+            summary: "Search Windows events using plain english.",
+            details: "Deep-dive visibility into Windows Event Logs, complete with keyword searches, diagnostics, and threat-hunting capabilities. Instead of digging through thousands of event IDs, you can search using human-friendly keywords like 'logon', 'usb', 'firewall', 'crash', or 'malware'."
+        },
+        "network": {
+            title: "Network",
+            summary: "Ping, trace, scan ports and analyse network performance.",
+            details: "Run pings, traceroutes, port scans and throughput tests to diagnose connectivity issues and performance bottlenecks across your network."
+        },
+        "hardware": {
+            title: "Hardware",
+            summary: "Check component health, drivers and hardware performance.",
+            details: "Inspect hardware health, driver status, temperatures and performance metrics to ensure your components are running reliably."
+        },
+        "disk-scan": {
+            title: "Disk Scan",
+            summary: "Find the largest files and analyse storage usage.",
+            details: "Scan local storage to identify large files, folders and usage patterns so you can reclaim space and optimise disk layout."
+        },
+        "lan-scan": {
+            title: "LAN Scan",
+            summary: "Discover all devices connected to the local network.",
+            details: "Enumerate devices on your local network, showing IP addresses, hostnames and basic fingerprinting to help you understand what is connected."
+        },
+        "wizard-error": {
+            title: "Wizard Error",
+            summary: "Use this to see errors with the Wizard itself.",
+            details: "Displays internal logs, exceptions and diagnostic information for Wizard of the Scrying Tower so you can troubleshoot the tool itself."
+        },
+        "program-spy": {
+            title: "Program Spy",
+            summary: "Monitor running programs and their CPU, RAM and uptime.",
+            details: "Shows active processes, their resource usage, runtime and behaviour to help you spot misbehaving or suspicious applications."
+        },
+        "updates": {
+            title: "Updates",
+            summary: "Check for and install the latest updates.",
+            details: "Checks for Windows and application updates, summarises what is available, and can trigger installation where appropriate."
+        },
+        "boot": {
+            title: "Boot",
+            summary: "Analyse startup applications and boot performance.",
+            details: "Reviews startup entries, boot times and related metrics so you can streamline the boot process and remove unnecessary items."
+        },
+        "sound": {
+            title: "Sound",
+            summary: "Manage audio settings and connected devices.",
+            details: "Provides a focused view of audio devices, levels, routing and common sound issues such as muted outputs or misconfigured devices."
+        },
+        "system": {
+            title: "System",
+            summary: "Activation status, TPM, hardware health and system overview.",
+            details: "Shows Windows activation status, TPM configuration, hardware health summary and key system properties in one place."
+        },
+        "benchmark": {
+            title: "Benchmark",
+            summary: "Measure and compare hardware performance.",
+            details: "Runs synthetic tests against CPU, GPU, disk and memory to give you comparative performance scores."
+        },
+        "custom-spell": {
+            title: "Custom Spell",
+            summary: "Create and manage custom spells.",
+            details: "Allows you to define your own diagnostic or utility workflows, saving them as reusable spells tailored to your environment."
+        },
+        "export": {
+            title: "Export",
+            summary: "Export HTML reports about your device.",
+            details: "Generates HTML reports ranging from battery information to full system summaries for documentation or support purposes."
+        },
+        "services": {
+            title: "Services",
+            summary: "Manage and analyse system services.",
+            details: "Lists Windows services, their status, startup type and dependencies, helping you tune background behaviour and troubleshoot issues."
+        },
+        "file-spy": {
+            title: "File Spy",
+            summary: "See detailed information about a file.",
+            details: "Shows metadata, hashes, size, location and other attributes for a selected file, useful for security and diagnostics."
+        },
+        "grimoire": {
+            title: "Grimoire",
+            summary: "A place to keep notes, ideas and thoughts.",
+            details: "A simple, secure notebook area for technicians to store observations, plans, and troubleshooting notes alongside their tools."
+        }
+    };
+
+    const modal = document.getElementById('spell-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalSummary = document.getElementById('modal-summary');
+    const modalDetails = document.getElementById('modal-details');
+    const modalExtraHeading = document.getElementById('modal-extra-heading');
+    const modalExtra = document.getElementById('modal-extra');
+    const closeModalBtn = modal.querySelector('.close-modal');
+
+    // Open modal on card click
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const spellKey = card.getAttribute('data-spell');
+            const data = spellData[spellKey];
+
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+            modalSummary.textContent = data.summary;
+            modalDetails.textContent = data.details || "";
+
+            if (data.extra) {
+                modalExtraHeading.style.display = "block";
+                modalExtra.style.display = "block";
+                modalExtra.textContent = data.extra;
+            } else {
+                modalExtraHeading.style.display = "none";
+                modalExtra.style.display = "none";
+                modalExtra.textContent = "";
+            }
+
+            modal.classList.add('active');
+        });
+    });
+
+    // Close modal button
+    closeModalBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+</script>
 
 </body>
 </html>
