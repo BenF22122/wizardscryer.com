@@ -304,6 +304,154 @@
             .tier-container { flex-direction: column; align-items: center; }
             .card { width: 100%; max-width: 360px; }
         }
+
+        /* Outer Version Accordion */
+.version-accordion {
+    margin-bottom: 24px;
+    border: 1px solid rgba(79, 172, 254, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(19, 26, 38, 0.9), rgba(10, 14, 23, 0.95));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.version-accordion:hover {
+    border-color: rgba(79, 172, 254, 0.5);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.15);
+}
+
+.version-summary {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    padding: 18px 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.version-summary::-webkit-details-marker {
+    display: none;
+}
+
+.version-summary:hover {
+    background: rgba(79, 172, 254, 0.06);
+}
+
+.version-accordion[open] > .version-summary {
+    border-bottom-color: rgba(79, 172, 254, 0.2);
+    background: rgba(79, 172, 254, 0.08);
+}
+
+/* Custom Animated Arrow Indicator */
+.version-summary::after {
+    content: '▼';
+    font-size: 0.85rem;
+    color: var(--magic-glow);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 6px rgba(79, 172, 254, 0.6));
+}
+
+.version-accordion[open] > .version-summary::after {
+    transform: rotate(-180deg);
+}
+
+/* Smooth Height Grid Animation Wrapper */
+.version-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.version-accordion[open] .version-content {
+    grid-template-rows: 1fr;
+}
+
+.version-content-inner {
+    overflow: hidden;
+    padding: 0 20px 20px 20px;
+}
+
+/* Inner Feature Accordions */
+.faq-item {
+    margin-top: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    background-color: rgba(10, 14, 23, 0.5);
+    overflow: hidden;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(243, 156, 18, 0.4);
+    background-color: rgba(19, 26, 38, 0.8);
+}
+
+.faq-item summary {
+    padding: 14px 20px;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary:hover {
+    color: var(--gold);
+}
+
+/* Plus to Minus Icon Animation */
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--magic-glow);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg); /* Rotates the + to look like an X */
+    color: var(--gold);
+}
+
+.faq-item[open] {
+    border-color: rgba(243, 156, 18, 0.5);
+    box-shadow: 0 0 12px rgba(243, 156, 18, 0.1);
+}
+
+/* Smooth Content Reveal */
+.faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item[open] .faq-content {
+    grid-template-rows: 1fr;
+}
+
+.faq-content p {
+    overflow: hidden;
+    padding: 0 20px 16px 20px;
+    margin-bottom: 0;
+    color: var(--text-muted);
+}
     </style>
 </head>
 <body>
@@ -318,7 +466,7 @@
                 <li><a href="https://wizardscryer.com">Home</a></li>
                 <li><a href="https://wizardscryer.com/#download">Download</a></li>
                 <li><a href="https://wizardscryer.com/about.html#about">About</a></li>
-                <li><a href="https://wizardscryer.com/FAQ.html#help">FAQ</a></li>
+                <li><a href="#help">FAQ</a></li>
                 <li><a href="https://wizardscryer.com/manual.html#about">User Guide</a></li>
             </ul>
         </nav>
@@ -343,46 +491,77 @@
         <section class="info-section" id="help">
          <!--   <h2>What's new with the Wizard?</h2> -->
             
-            <div class="faq-item">
-                <h3>Updates for Wizard of the Scrying Tower V3.0</h3><br>
-                <h4>Scroll Spells</h4>
-                <p>Encryption improvements made to this feature. Including better memory protection, paranoia mode and introducing WizVault for secure data folders.</p>
-            </div>
+           <!-- VERSION 3.2 ACCORDION (NEWEST - TOP) -->
+            <details class="version-accordion" open>
+                <summary class="version-summary">Updates for Wizard of the Scrying Tower V3.2</summary>
+                <div class="version-content">
 
-            <div class="faq-item">
-                <h4>Audio Scyer</h4>
-                <p>The Audio Scyer feature has been enhanced with improved accuracy, better monitoring capabilities, and a more intuitive user interface.</p>
-            </div>
+                    <details class="faq-item">
+                        <summary>Updated Network Scryer</summary>
+                        <p>The Network Scryer has been updated with improved detection capabilities. Along with new live hop direction, speed tests and live DNS health checks</p>
+                    </details>
 
-            <div class="faq-item">
-                <h4>Knowledge Orb</h4>
-                <p>The Knowledge Orb is a brand new feature that provides enhanced knowledge. Ask the Wizard anything and have it explain it in a way that's easy to understand. Examples are "explain what a CPU is", or "What is a VLAN"?</p>
-            </div>
+                    <details class="faq-item">
+                        <summary>Updated NetHardware Scryer</summary>
+                        <p>Allows in depth hardware scrying of local hardware. Includes new Arcana options for support devices.</p>
+                    </details>
 
-              <div class="faq-item">
-                <h4>Dashboard</h4>
-                <p>The Dashboard provides a centralized view of your system's performance and health, allowing you to monitor key metrics at a glance.</p>
-            </div>
+                    <details class="faq-item">
+                        <summary>Updated Grimoire</summary>
+                        <p>Allows better search and organization of magical knowledge. Also allows basic password protection for more sensitive notes.</p>
+                    </details>
 
-              <div class="faq-item">
-                <h4>Program Spy</h4>
-                <p>The Program Spy now allows you to monitor an application startup process. You can see DLLs loaded, boot time, network activity and more.</p>
-            </div>
+                </div>
+            </details>
 
-             <div class="faq-item">
-                <h4>Terminal Scripts</h4>
-                <p>The Terminal Scripts feature allows you to search for commands and scripts directly from the Wizard's interface, providing a powerful tool for advanced users.</p>
-            </div>
+            <!-- VERSION 3.0 ACCORDION -->
+            <details class="version-accordion">
+                <summary class="version-summary">Updates for Wizard of the Scrying Tower V3.0</summary>
+                <div class="version-content">
+                    
+                    <details class="faq-item">
+                        <summary>Scroll Spells</summary>
+                        <p>Encryption improvements made to this feature. Including better memory protection, paranoia mode and introducing WizVault for secure data folders.</p>
+                    </details>
 
-             <div class="faq-item">
-                <h4>Security Scryer</h4>
-                <p>Allow the Wizard to search your machine for potential security threats and vulnerabilities.</p>
-            </div>
+                    <details class="faq-item">
+                        <summary>Audio Scyer</summary>
+                        <p>The Audio Scyer feature has been enhanced with improved accuracy, better monitoring capabilities, and a more intuitive user interface.</p>
+                    </details>
 
-              <div class="faq-item">
-                <h4>Policy Scryer</h4>
-                <p>Allow the Wizard to inspect the policies in place on your system and identify any potential issues.</p>
-            </div>
+                    <details class="faq-item">
+                        <summary>Knowledge Orb</summary>
+                        <p>The Knowledge Orb is a brand new feature that provides enhanced knowledge. Ask the Wizard anything and have it explain it in a way that's easy to understand. Examples are "explain what a CPU is", or "What is a VLAN"?</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Dashboard</summary>
+                        <p>The Dashboard provides a centralized view of your system's performance and health, allowing you to monitor key metrics at a glance.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Program Spy</summary>
+                        <p>The Program Spy now allows you to monitor an application startup process. You can see DLLs loaded, boot time, network activity and more.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Terminal Scripts</summary>
+                        <p>The Terminal Scripts feature allows you to search for commands and scripts directly from the Wizard's interface, providing a powerful tool for advanced users.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Security Scryer</summary>
+                        <p>Allow the Wizard to search your machine for potential security threats and vulnerabilities.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Policy Scryer</summary>
+                        <p>Allow the Wizard to inspect the policies in place on your system and identify any potential issues.</p>
+                    </details>
+
+                </div>
+            </details>
+
         </section>
 
     </div>
